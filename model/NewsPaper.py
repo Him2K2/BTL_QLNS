@@ -1,9 +1,9 @@
 import BookDocument
 class Book(BookDocument):
-    def __init__(self, id, publisher, inventory, quantitySale, price, releaseDate):
+    def __init__(self, id, publisher, inventory, quantitySale, price, publishDate):
         super().__init__(id, publisher, inventory, quantitySale, price)
-        self.__releaseDate = releaseDate #ngày phát hành
+        self.__publishDate = publishDate #ngày phát hành
 
     #getter & setter of release date
-    def get_Release_Date(self): return self.__releaseDate
-    def set_Release_Date(self, value): self.__releaseDate = value
+    def get_Publish_Date(self): return self.__releaseDate
+    def set_Publish_Date(self, publishDate): self.__publishDate = publishDate
