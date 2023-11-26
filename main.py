@@ -1,16 +1,21 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import ManageDocument
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+while True:
+    print('''
+    1. Thêm sách
+    2. Thêm Tạp chí
+    3. Thêm Báo
+    4. Hiển thị danh sách Sách
+    5. Thoát
+    ''')
+    choice = int(input("Nhập lựa chọn: "))
+    if choice == 1:
+        ManageDocument.insertBook()
+    elif choice == 2:
+        ManageDocument.insertMagazine()
+    elif choice == 3:
+        ManageDocument.insertNewsPaper()
+    elif choice == 4:
+        print("Số lượng sách hiện có: {}".format(ManageDocument.quantityBook()))
+        ManageDocument.displayBook()
