@@ -1,4 +1,5 @@
-import BookDocument
+from model.BookDocument import BookDocument
+
 class Book(BookDocument):
     def __init__(self, id, publisher, inventory, quantitySale, price, issueNumber, releaseMonth):
         super().__init__(id, publisher, inventory, quantitySale, price)
@@ -12,3 +13,7 @@ class Book(BookDocument):
     #getter & setter of pages
     def get_Release_Month(self): return self.__releaseMonth
     def set_Release_Month(self, value): self.__releaseMonth = value
+    def showMagazine(self):
+        super().display()
+        print(f"Số phát hành: {self.__issueNumber}")
+        print(f"Tháng phát hành: {self.__publishMonth}")
