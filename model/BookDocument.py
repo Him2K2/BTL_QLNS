@@ -25,3 +25,9 @@ class BookDocument():
     # getter & setter of price
     def get_Price(self): return self.__price
     def set_Price(self, value): self.__price = value
+    def display(self):
+        print(f"Mã tài liệu: {self.__id}")
+        print(f"Nhà xuất bản: {self.__publisher}")
+        print(f"Số lượng tồn kho: {self.__quantity}")
+        print(f"Số lượng bán theo ngày: {self.__soldPerDay}")
+        print(f"Giá bán: {self.__price}")
